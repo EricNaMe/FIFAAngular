@@ -1,0 +1,66 @@
+@import '~@angular/material/theming';
+@import 'mixins';
+
+
+
+/* Navigation Styles*/
+
+$link-normal: black;
+$link-active: #FFFFFF;
+$link-bg-active: #272D36;
+
+$title-normal: #0D141F;
+
+$border-links: 7px;
+$border-buttons-ac: 10px;
+
+
+/*Table Styles*/
+$primary-background: #F5F7FA;
+$primary-button: #0967D2;
+$primary-blue-light: #E6F6FF;
+$dark-paragraph: #1F2933;
+$white-paragraph:#F5F7FA;
+
+$button__bg_excel: #EDEEF1;
+$button__font_excel: #6D727B;
+
+$background-color: #F5F5F5;
+$height-button: 3em;
+
+$image-size: 40px;
+
+
+$primary: #28a840;
+$primary-light: lighten($primary, 10);
+$primary-dark: darken($primary, 10);
+
+$secondary: #203860;
+$secondary-light: lighten($secondary, 30);
+$secondary-dark: darken($secondary, 10);
+$secondary-lighter: #EFF5F8;
+
+
+$margin-container: 2em;
+
+$red: #d93826;
+$yellow: #ffd000;
+$green: #4dc62f;
+$cyan: #5e9fe8;
+$blue: $cyan;
+$purple: #A367BB;
+$blue-silver: #F0F0F7;
+$silver: #e4e4e4;
+$gray: #737373;
+
+$secondary-lighter: #EFF5F8;
+
+$success: $green;
+$warning: $yellow;
+$danger: $red;
+
+$smWidth: 768px;
+$mdWidth: 992px;
+$lgWidth: 1170px;
+$xlWidth: 1400px;
+$side-bar-text-color: #111;

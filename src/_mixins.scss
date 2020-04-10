@@ -1,0 +1,49 @@
+@mixin animate($efecto:ease,$tiempo:.5s) {
+  transition: all $efecto $tiempo;
+}
+
+@mixin textShadow($ejeX: 0px,$ejeY: 0px,$blur: 5px, $color: black, $por:.5) {
+  -moz-text-shadow: $ejeX $ejeY $blur rgba($color, $por);
+  text-shadow: $ejeX $ejeY $blur rgba($color, $por);
+}
+
+@mixin from($from){
+  @media screen and (min-width:$from){
+    @content;
+  }
+}
+
+@mixin to($to){
+  @media screen and (max-width:$to){
+    @content;
+  }
+}
+
+@mixin fromTo($from,$to){
+  @media screen and (min-width: $from) and (max-width: ($to) - 1px) {
+    @content
+  }
+}
+
+@mixin square($size){
+  width: $size;
+  height: $size;
+  img{
+    width: 100%;
+  }
+}
+
+@mixin circle($size){
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+  overflow: hidden;
+  img{
+    width: 100%;
+  }
+}
+@mixin gradient($angulo:0deg,$colorA:$none,$colorB:$none,$colorC:$none,$imagen:$none) {
+  background: -webkit-linear-gradient($angulo,$colorA,$colorB,$colorC)$imagen;
+  background: -moz-linear-gradient($angulo,$colorA,$colorB,$colorC)$imagen;
+  background: linear-gradient($angulo,$colorA,$colorB,$colorC)$imagen;
+}

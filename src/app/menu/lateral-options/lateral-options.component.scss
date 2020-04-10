@@ -1,0 +1,28 @@
+@import "src/variables";
+.material-icons {
+  margin-right: .25em;
+}
+
+
+
+.link {
+  color: $link-normal;
+  font-size:2em;
+
+}
+
+.active {
+  color: $link-active;
+  background-color: $link-bg-active;
+  border-radius: $border-links;
+  margin-left: 5%;
+  width: 90%;
+
+  &:active {
+    background-color: $link-bg-active;
+    color: $link-active;
+    font-weight: 500;
+  }
+}
+
+

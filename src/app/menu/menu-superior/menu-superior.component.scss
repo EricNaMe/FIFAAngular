@@ -1,0 +1,29 @@
+
+@import "src/variables";
+.menu-superior{
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+
+.mat-row{
+  display: flex;
+  align-content: center;
+  align-items: center;
+
+}
+
+.active{
+  background-color:lightslategray;
+}
+
+.mat-button{
+
+}
+
+.image-logo {
+  cursor: pointer;
+  width: 150px;
+  height: 40px;
+}
+
