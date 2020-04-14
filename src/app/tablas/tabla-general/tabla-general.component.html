@@ -1,0 +1,58 @@
+<mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  <!-- Position Column -->
+  <ng-container matColumnDef="posicion">
+    <mat-header-cell *matHeaderCellDef> POSICION </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.posicion}} </mat-cell>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="nombre">
+    <mat-header-cell *matHeaderCellDef> EQUIPO </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.nombre}} </mat-cell>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="puntos">
+    <mat-header-cell *matHeaderCellDef> PUNTOS </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.puntos}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="pj">
+    <mat-header-cell *matHeaderCellDef> PJ </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.pj}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="pg">
+    <mat-header-cell *matHeaderCellDef> PG </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.pg}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="pe">
+    <mat-header-cell *matHeaderCellDef> PE </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.pe}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="pp">
+    <mat-header-cell *matHeaderCellDef> PP </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.pp}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="gf">
+    <mat-header-cell *matHeaderCellDef> GF </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.gf}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="gc">
+    <mat-header-cell *matHeaderCellDef> GC </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.gc}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="dg">
+    <mat-header-cell *matHeaderCellDef> DG </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.dg}} </mat-cell>
+  </ng-container>
+
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+</mat-table>
