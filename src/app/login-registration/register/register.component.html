@@ -1,0 +1,61 @@
+<p>register works!</p>
+<div class="example-container">
+ <div class="child-container">
+   <h2>Please register</h2>
+   <form #f="ngForm" (ngSubmit)="submit(f)">
+<p>
+  <mat-form-field appearance="outline">
+    <mat-label>email</mat-label>
+    <label>
+      <input ngModel #name="ngModel" name="email" matInput placeholder="email">
+    </label>
+    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+  </mat-form-field>
+</p>
+
+  <mat-form-field  appearance="outline">
+    <mat-label>Enter your password</mat-label>
+    <input ngModel #password="ngModel" name="password" matInput [type]="hide ? 'password' : 'text'">
+    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+    </button>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Confirm your password</mat-label>
+    <input ngModel #confirmPassword="ngModel" name="confirmPassword" matInput [type]="hide ? 'password' : 'text'">
+    <button mat-icon-button matSuffix (click)="hide2 = !hide2" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide2">
+      <mat-icon>{{hide2 ? 'visibility_off' : 'visibility'}}</mat-icon>
+    </button>
+  </mat-form-field>
+
+<p>
+  <mat-form-field appearance="outline">
+    <mat-label>Name</mat-label>
+    <label>
+      <input ngModel #name="ngModel" name="name" matInput placeholder="Name">
+    </label>
+    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+  </mat-form-field>
+</p>
+<p>
+  <mat-form-field appearance="outline">
+    <mat-label>Last name</mat-label>
+    <label>
+      <input ngModel #lastName="ngModel" name="lastName" matInput placeholder="Last name">
+    </label>
+    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+
+  </mat-form-field>
+</p>
+<p>
+  <mat-form-field appearance="outline">
+    <mat-label>Birth date</mat-label>
+    <input ngModel #birthDate="ngModel" name="birthDate" matInput [matDatepicker]="picker">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+</p>
+   <button color="" mat-button>Submit</button>
+   </form>
+ </div>
+</div>

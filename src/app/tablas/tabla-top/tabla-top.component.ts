@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {HttpClient} from "@angular/common/http";
 
 @Component({
   selector: 'app-tabla-top',
@@ -22,7 +23,9 @@ export class TablaTopComponent implements OnInit {
     {posicion: 5, nombre: 'Pumas', puntos: 22}
   ];
   dataSource = this.PeriodicElement;
-  constructor() { }
+  constructor(http: HttpClient) { }
+
+
 
   ngOnInit(): void {
   }

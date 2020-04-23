@@ -1,0 +1,16 @@
+<mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  <!-- Position Column -->
+  <ng-container matColumnDef="nombre">
+    <mat-header-cell *matHeaderCellDef> NOMBRE </mat-header-cell>
+    <mat-cell *matCellDef="let user"> {{user.name}} </mat-cell>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="pais">
+    <mat-header-cell *matHeaderCellDef> PAIS </mat-header-cell>
+    <mat-cell *matCellDef="let user"> {{user.country}} </mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+</mat-table>

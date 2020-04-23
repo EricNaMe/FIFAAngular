@@ -18,6 +18,23 @@ import {GalleryModule} from "@ngx-gallery/core";
 import { TablaGeneralComponent } from './tablas/tabla-general/tabla-general.component';
 import {MatTableModule} from "@angular/material/table";
 import { TablaTopComponent } from './tablas/tabla-top/tabla-top.component';
+import { MenuLateralBuenoComponent } from './menu-lateral-bueno/menu-lateral-bueno.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
+import {HttpClientModule} from "@angular/common/http";
+import {UsersService} from "./services/users/users.service";
+import { TablaUsuariosComponent } from './tablas/tabla-usuarios/tabla-usuarios.component';
+import { RegisterComponent } from './login-registration/register/register.component';
+import { LoginComponent } from './login-registration/login/login.component';
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {MatInputModule} from "@angular/material/input";
+import {MatDatepickerModule} from "@angular/material/datepicker";
+import {MatNativeDateModule} from "@angular/material/core";
 
 
 // @ts-ignore
@@ -34,7 +51,11 @@ import { TablaTopComponent } from './tablas/tabla-top/tabla-top.component';
     NoticiasComponent,
     GaleriaComponent,
     TablaGeneralComponent,
-    TablaTopComponent
+    TablaTopComponent,
+    MenuLateralBuenoComponent,
+    TablaUsuariosComponent,
+    RegisterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -42,6 +63,8 @@ import { TablaTopComponent } from './tablas/tabla-top/tabla-top.component';
     NoopAnimationsModule,
     GalleryModule,
     GallerizeModule,
+    HttpClientModule,
+    MatNativeDateModule,
     MenuModule,
     MatTableModule,
     RouterModule.forRoot([
@@ -49,13 +72,26 @@ import { TablaTopComponent } from './tablas/tabla-top/tabla-top.component';
       {path: '1vs1', component: PvspComponent},
       {path: 'profile/:id', component: ProfileComponent},
       {path: 'clubespro', component: ClubesProComponent},
-      {path: 'reglamento', component: ReglamentoComponent},
+      {path: 'rules', component: ReglamentoComponent},
       {path: 'clips', component: ClipsComponent},
-      {path: 'noticias', component: NoticiasComponent},
+      {path: 'news', component: NoticiasComponent},
+      {path: 'login', component: LoginComponent},
+      {path: 'register', component: RegisterComponent},
       {path: '**', component: NotFoundComponent}
-    ])
+    ]),
+    LayoutModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule,
+    MatFormFieldModule,
+    ReactiveFormsModule,
+    MatInputModule,
+    MatDatepickerModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [UsersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
