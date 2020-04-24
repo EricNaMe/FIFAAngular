@@ -2,7 +2,37 @@
 <div class="example-container">
  <div class="child-container">
    <h2>Please register</h2>
-   <form #f="ngForm" (ngSubmit)="submit(f)">
+   <form #f="ngForm" (ngSubmit)="save(f.value)">
+
+     <p>
+       <mat-form-field appearance="outline">
+         <mat-label>Name</mat-label>
+         <label>
+           <input ngModel #name="ngModel" name="name" matInput placeholder="Name">
+         </label>
+         <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+       </mat-form-field>
+     </p>
+     <p>
+       <mat-form-field appearance="outline">
+         <mat-label>Alias</mat-label>
+         <label>
+           <input ngModel #lastName="ngModel" name="alias" matInput placeholder="Last name">
+         </label>
+         <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+
+       </mat-form-field>
+     </p>
+  <p>
+     <mat-form-field appearance="outline">
+       <mat-label>Age</mat-label>
+       <input maxlength="2" ngModel #age="ngModel" name="age" matInput type="number" class="example-right-align">
+     </mat-form-field>
+     <mat-form-field appearance="outline">
+       <mat-label>Country</mat-label>
+       <input  ngModel #country="ngModel" name="country" matInput  class="example-right-align">
+     </mat-form-field>
+  </p>
 <p>
   <mat-form-field appearance="outline">
     <mat-label>email</mat-label>
@@ -22,31 +52,13 @@
   </mat-form-field>
   <mat-form-field appearance="outline">
     <mat-label>Confirm your password</mat-label>
-    <input ngModel #confirmPassword="ngModel" name="confirmPassword" matInput [type]="hide ? 'password' : 'text'">
+    <input  matInput [type]="hide ? 'password' : 'text'">
     <button mat-icon-button matSuffix (click)="hide2 = !hide2" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide2">
       <mat-icon>{{hide2 ? 'visibility_off' : 'visibility'}}</mat-icon>
     </button>
   </mat-form-field>
 
-<p>
-  <mat-form-field appearance="outline">
-    <mat-label>Name</mat-label>
-    <label>
-      <input ngModel #name="ngModel" name="name" matInput placeholder="Name">
-    </label>
-    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-  </mat-form-field>
-</p>
-<p>
-  <mat-form-field appearance="outline">
-    <mat-label>Last name</mat-label>
-    <label>
-      <input ngModel #lastName="ngModel" name="lastName" matInput placeholder="Last name">
-    </label>
-    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
 
-  </mat-form-field>
-</p>
 <p>
   <mat-form-field appearance="outline">
     <mat-label>Birth date</mat-label>
@@ -55,7 +67,7 @@
     <mat-datepicker #picker></mat-datepicker>
   </mat-form-field>
 </p>
-   <button color="" mat-button>Submit</button>
+   <button color="" mat-button [disabled]="!f.valid">Submit</button>
    </form>
  </div>
 </div>
