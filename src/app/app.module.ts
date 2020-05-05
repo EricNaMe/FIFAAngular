@@ -35,6 +35,7 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatInputModule} from "@angular/material/input";
 import {MatDatepickerModule} from "@angular/material/datepicker";
 import {MatNativeDateModule} from "@angular/material/core";
+import { RegistrationSuccessComponent } from './login-registration/registration-success/registration-success.component';
 
 
 // @ts-ignore
@@ -55,7 +56,8 @@ import {MatNativeDateModule} from "@angular/material/core";
     MenuLateralBuenoComponent,
     TablaUsuariosComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    RegistrationSuccessComponent
   ],
   imports: [
     BrowserModule,
@@ -77,6 +79,7 @@ import {MatNativeDateModule} from "@angular/material/core";
       {path: 'news', component: NoticiasComponent},
       {path: 'login', component: LoginComponent},
       {path: 'register', component: RegisterComponent},
+      {path: 'registration-success', component: RegistrationSuccessComponent},
       {path: '**', component: NotFoundComponent}
     ]),
     LayoutModule,
