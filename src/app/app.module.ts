@@ -8,6 +8,7 @@ import {RouterModule} from '@angular/router';
 import { PvspComponent } from './1vs1/pvsp/pvsp.component';
 import { ProfileComponent } from './users/profile/profile.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { AppRoutingModule } from './app-routing.module';
 import { ClubesProComponent } from './clubes-pro/clubes-pro.component';
 import { ReglamentoComponent } from './seccion-reglamento/reglamento/reglamento.component';
 import { ClipsComponent } from './seccion-clips/clips/clips.component';
@@ -36,6 +37,8 @@ import {MatInputModule} from "@angular/material/input";
 import {MatDatepickerModule} from "@angular/material/datepicker";
 import {MatNativeDateModule} from "@angular/material/core";
 import { RegistrationSuccessComponent } from './login-registration/registration-success/registration-success.component';
+import { MultipleUsersComponent } from './users/multiple-users/multiple-users.component';
+import { FirstComponent } from './first/first.component';
 
 
 // @ts-ignore
@@ -57,7 +60,9 @@ import { RegistrationSuccessComponent } from './login-registration/registration-
     TablaUsuariosComponent,
     RegisterComponent,
     LoginComponent,
-    RegistrationSuccessComponent
+    RegistrationSuccessComponent,
+    MultipleUsersComponent,
+    FirstComponent
   ],
   imports: [
     BrowserModule,

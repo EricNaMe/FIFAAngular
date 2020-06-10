@@ -16,6 +16,7 @@ export class RegisterComponent implements OnInit {
   constructor(private service: UsersService, private router: Router) { }
 
   save(user) {
+    console.log(user);
     this.service.createUser(user)
       .subscribe(response => {
         console.log(response);
