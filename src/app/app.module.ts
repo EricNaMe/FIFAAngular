@@ -4,7 +4,6 @@ import { AppComponent } from './app.component';
 import {BrowserAnimationsModule, NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {MenuModule} from './menu/menu.module';
 import { HomeComponent } from './home/home.component';
-import {RouterModule} from '@angular/router';
 import { PvspComponent } from './1vs1/pvsp/pvsp.component';
 import { ProfileComponent } from './users/profile/profile.component';
 import { NotFoundComponent } from './not-found/not-found.component';
@@ -65,6 +64,7 @@ import { FirstComponent } from './first/first.component';
     FirstComponent
   ],
   imports: [
+    AppRoutingModule,
     BrowserModule,
     BrowserAnimationsModule,
     NoopAnimationsModule,
@@ -74,19 +74,6 @@ import { FirstComponent } from './first/first.component';
     MatNativeDateModule,
     MenuModule,
     MatTableModule,
-    RouterModule.forRoot([
-      {path: '', component: HomeComponent},
-      {path: '1vs1', component: PvspComponent},
-      {path: 'profile/:id', component: ProfileComponent},
-      {path: 'clubespro', component: ClubesProComponent},
-      {path: 'rules', component: ReglamentoComponent},
-      {path: 'clips', component: ClipsComponent},
-      {path: 'news', component: NoticiasComponent},
-      {path: 'login', component: LoginComponent},
-      {path: 'register', component: RegisterComponent},
-      {path: 'registration-success', component: RegistrationSuccessComponent},
-      {path: '**', component: NotFoundComponent}
-    ]),
     LayoutModule,
     MatToolbarModule,
     MatButtonModule,
